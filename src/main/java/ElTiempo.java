@@ -5,6 +5,7 @@ import org.jsoup.select.Elements;
 
 
 import java.io.IOException;
+import java.sql.SQLOutput;
 
 public class ElTiempo {
 
@@ -15,7 +16,8 @@ public static void main(String[] args) throws IOException {
     String temperatura = elementoTemperatura.text();
     Elements elementoTiempo = doc.getElementsByClass("today_nowcard-phrase");
     String tiempo = elementoTiempo.text();
-    System.out.println(temperatura+" "+tiempo);
+    System.out.println(temperatura+" "+tiempo+". Datos extraídos de "+doc.title());
+
 }
 
 }
